@@ -1,11 +1,704 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    This assignment 2
-</body>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hockeys Club</title>
+    <!-- For Using tailwind css and DaisyUI  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- For Using Google Manrope Font  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- For Using Custom Colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-color": "#FF4240",
+              "primary-title-color": "#131318",
+              "secondary-color": "#424247",
+              "star-color": "#F99808",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body class="font-manrope">
+
+    <!-- Here Start Header  -->
+
+    <header class="container mx-auto  max-w-[1170px]">
+      <!-- Here Start Nav Bar  -->
+
+      <nav class="my-16">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li class="text-base font-normal text-primary-color">
+                  <a>Home</a>
+                </li>
+                <li class="text-base font-normal text-secondary-color">
+                  <a>About</a>
+                </li>
+                <li class="text-base font-normal text-secondary-color">
+                  <a>Pages</a>
+                </li>
+                <li class="text-base font-normal text-secondary-color">
+                  <a>Blog</a>
+                </li>
+                <li class="text-base font-normal text-secondary-color">
+                  <a>Contact</a>
+                </li>
+              </ul>
+            </div>
+            <a class="text-xl lg:text-4xl text-primary-title-color font-extrabold"
+              >Hockey<span class="text-primary-color">’</span>s</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li class="text-base font-normal text-primary-color lg:px-6">
+                <a>Home</a>
+              </li>
+              <li class="text-base font-normal text-secondary-color lg:px-5">
+                <a>About</a>
+              </li>
+              <li class="text-base font-normal text-secondary-color lg:px-6">
+                <a>Pages</a>
+              </li>
+              <li class="text-base font-normal text-secondary-color lg:px-5">
+                <a>Blog</a>
+              </li>
+              <li class="text-base font-normal text-secondary-color lgpx-6">
+                <a>Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end flex gap-2 lg:gap-6">
+            <a class="hidden lg:block "><img src="./Images/Frame.png" alt="" /></a>
+            <button>
+              <a
+                class="px-2 py-1.5 lg:px-6 lg:py-3 bg-primary-color text-base lg:text-xl font-bold text-white rounded-lg"
+                >Get Ticket</a
+              >
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Banner Section  --> 
+      
+      <section class="container px-2 lg:px-0 mx-auto pb-24 ">
+        <div class="carousel w-full ">
+            <div id="slide1" class="carousel-item relative  w-full bg-no-repeat  bg-cover bg-center h-[60vh] lg:h-[550px] rounded-2xl bg-[linear-gradient(180deg,rgba(211,211,211,0.1),rgba(211,211,211,0.1)),url(./Images/1.png)] ">
+            <div class="absolute bottom-5 lg:bottom-8 left-[38%] lg:left-8 space-x-4">
+                  <a href="#slide2" class="btn btn-circle bg-black text-white border-0">❮</a> 
+                  <a href="#slide2" class="btn btn-circle bg-black text-white border-0">❯</a>
+                </div>
+                  <div class="bg-primary-title-color h-auto hidden lg:block w-[303px] lg:w-[566px] rounded-xl lg:absolute lg:right-8 lg:bottom-8 ">
+                  <div class="m-8">
+                    <h3 class="text-white text-2xl font-extrabold pb-4">Meet all the heroes from the field</h3>
+                  <p class="text-base text-[rgba(255,255,255,0.60)] font-medium">Discover the extraordinary stories of our field heroes. From dedicated players to visionary coaches, each contributes to our legacy of excellence, passion, and teamwork. Unveil their journeys now.</p>
+                  </div>
+              </div>
+              </div>       
+              <div id="slide2" class="carousel-item relative w-full bg-no-repeat bg-cover bg-center h-[60vh] lg:h-[550px] rounded-2xl bg-[linear-gradient(180deg,rgba(211,211,211,0.1),rgba(211,211,211,0.1)),url(./Images/stadium.png)]">
+              <div class="absolute bottom-5 lg:bottom-8 left-[38%] lg:left-8 space-x-4">
+                <a href="#slide1" class="btn btn-circle bg-black text-white border-0">❮</a> 
+                <a href="#slide1" class="btn btn-circle bg-black text-white border-0">❯</a>
+              </div>
+              <div class="bg-primary-title-color h-auto hidden lg:block w-[303px] lg:w-[566px] rounded-xl lg:absolute lg:right-8 lg:bottom-8 ">
+                <div class="m-8">
+                  <h3 class="text-white text-2xl font-extrabold pb-4">Encounter Legends on the Ice: Embrace the Icons of Our Hockey Arena</h3>
+                <p class="text-base text-[rgba(255,255,255,0.60)] font-medium">Dive into the heart of our hockey arena, where legends are born. Experience the thrill as iconic players carve their legacy on the ice. Unforgettable moments await.</p>
+                </div>
+            </div>    
+        </div>
+      </div>
+        <div class="bg-primary-title-color h-auto block lg:hidden w-full rounded-xl mt-4 ">
+                <div class="p-6">
+                  <h3 class="text-white text-xl font-extrabold pb-4">Meet all the heroes from the field</h3>
+                <p class="text-base text-[rgba(255,255,255,0.60)] font-medium">Discover the extraordinary stories of our field heroes. From dedicated players to visionary coaches, each contributes to our legacy of excellence, passion, and teamwork. Unveil their journeys now.</p>
+                </div>
+        </section>
+    </header>
+
+
+    <main class="container mx-auto max-w-[1170px] ">
+
+      <!-- Professional Hockeys Club Section -->
+
+      <section class="mx-auto container px-2 lg:px-0 pb-32 ">
+        <div
+          class="text-center mx-auto py-8 border-y-2 border-dashed space-y-6"
+        >
+          <h2 class="text-4xl font-extrabold text-primary-title-color">
+            Professional Hockeys Club
+          </h2>
+          <p
+            class="w-[60%] mx-auto text-center text-base font-medium leading-6 text-[rgba(19, 19, 24, 0.60)]"
+          >
+            Passion-fueled powerhouse on ice. Elevating the game with skill,
+            speed, and teamwork. Join us for exhilarating hockey excellence!
+          </p>
+        </div>
+        <!-- card container  -->
+        <div
+          class="py-12 flex flex-col lg:flex-row justify-between items-center"
+        >
+          <!-- 1st card  -->
+          <div class="card">
+            <figure class="px-10 pt-10">
+              <div
+                class="radial-progress text-primary-color"
+                style="--value: 87"
+                role="progressbar"
+              >
+                <span class="text-primary-title-color text-xl">87%</span>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center space-y-4">
+              <h2 class="card-title text-xl font-semibold text-primary-title-color">
+                Prayer Facility
+              </h2>
+              <p>Sacred space for pre-game focus and unity through prayer.</p>
+            </div>
+          </div>
+          <!-- 2nd card  -->
+          <div class="card">
+            <figure class="px-10 pt-10">
+              <div
+                class="radial-progress text-[#49D293]"
+                style="--value: 95"
+                role="progressbar"
+              >
+                <span class="text-primary-title-color text-xl">95%</span>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center space-y-4">
+              <h2 class="card-title text-xl font-semibold text-primary-title-color">
+                Experienced Coach
+              </h2>
+              <p>
+                Expert mentor cultivating champions with seasoned wisdom and
+                strategic brilliance.
+              </p>
+            </div>
+          </div>
+          <!-- 3rd card  -->
+          <div class="card">
+            <figure class="px-10 pt-10">
+              <div
+                class="radial-progress text-[#FFB546]"
+                style="--value: 90"
+                role="progressbar"
+              >
+                <span class="text-primary-title-color text-xl">90%</span>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center space-y-4">
+              <h2 class="card-title text-xl font-semibold text-primary-title-color">
+                Senior Player
+              </h2>
+              <p>
+                Veteran leader igniting the ice with skill, experience, and
+                dedication.
+              </p>
+            </div>
+          </div>
+          <!-- 4th card  -->
+          <div class="card">
+            <figure class="px-10 pt-10">
+              <div
+                class="radial-progress text-[#4C8DF1]"
+                style="--value: 80"
+                role="progressbar"
+              >
+                <span class="text-primary-title-color text-xl">80%</span>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center space-y-4">
+              <h2 class="card-title text-xl font-semibold text-primary-title-color">
+                Training Ground
+              </h2>
+              <p>
+                Pinnacle arena where champions forge skills through precision
+                and determination.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section >
+
+      <!-- Start Programming Section From Here  -->
+      <section class="pb-24 container px-2 lg:px-0 ">
+        <!-- section content  -->
+        <div
+          class="text-center mx-auto mb-12 py-8 border-y-2 border-dashed space-y-6"
+        >
+          <h2 class="text-4xl font-extrabold text-primary-title-color">
+            Program Sections
+          </h2>
+          <p
+            class="w-[60%] mx-auto text-center text-base font-medium leading-6 text-[rgba(19, 19, 24, 0.60)]"
+          >
+            Elevate your game with our comprehensive programs, blending elite
+            training, strategic coaching, and unparalleled dedication to
+            excellence.
+          </p>
+        </div>
+        <!-- Section grid container  -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-center">
+          <!-- 1st card  -->
+          <div class="flex items-center w-full bg-cover bg-center rounded-2xl h-[335px] lg:h-[338px] bg-[linear-gradient(180deg,rgba(19,19,24,0.5),rgba(19,19,19,0.5)),url(./Images/2.png)]">
+            <div class="lg:pt-24 lg:pb-12 space-y-4 px-4 py-4 lg:px-10">
+              <h3 class="text-3xl font-extrabold text-white">Junior Program</h3>
+              <p class="text-base font-medium leading-6 text-white">
+                Nurture young talents with our Hockey Junior Program. Expert coaching, skill development, and a supportive environment shape future champions. Join us for an exhilarating journey on the ice!
+              </p>
+              <button class="px-6 py-3 bg-primary-color text-base lg:text-xl font-bold text-white rounded-lg">Register Now!</button>
+            </div>
+          </div>
+          <!-- 2nd card  -->
+          <div class="flex items-center w-full bg-cover bg-center rounded-2xl h-[335px] lg:h-[338px] bg-[linear-gradient(180deg,rgba(19,19,24,0.5),rgba(19,19,19,0.5)),url(./Images/3.png)]">
+            <div class="lg:pt-24 lg:pb-12 space-y-4 px-4 py-4 lg:px-10">
+              <h3 class="text-3xl font-extrabold text-white">Teenager Program</h3>
+              <p class="text-base font-medium leading-6 text-white">
+                Elevate teenage athletes with our specialized program. Focused training, mentorship, and a vibrant community empower teenagers to thrive, excel, and enjoy the game of hockey to the fullest.
+              </p>
+              <button class="px-6 py-3 bg-primary-color text-base lg:text-xl font-bold text-white rounded-lg">Register Now!</button>
+            </div>
+          </div>
+          <!-- 3rd card  -->
+          <div class="flex items-center lg:items-end text-start w-full object-cover bg-cover lg:col-span-2 bg-center rounded-2xl h-[335px] lg:h-[450px]   bg-[linear-gradient(180deg,rgba(19,19,24,0.5),rgba(19,19,19,0.5)),url(./Images/4.png)]">
+            <div class="lg:pt-24 lg:pb-12 space-y-1.5 lg:space-y-4 px-4 py-4 lg:px-10" >
+              <h3 class="text-3xl font-extrabold text-white">Professional Program</h3>
+              <p class="text-base font-medium leading-6 text-white ">
+                Unleash your potential in our Professional Program. Expert coaching, advanced training, and a competitive environment propel athletes toward excellence, success, and peak performance in professional hockey arenas.
+              </p>
+              <button class="px-6 py-3 bg-primary-color text-base lg:text-xl font-bold text-white rounded-lg">Register Now!</button>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Our New Products Section Start Here  -->
+
+      <section class="mx-auto container px-2 lg:px-0" >
+        <div
+          class="text-center mx-auto py-8 border-y-2 border-dashed space-y-6"
+        >
+          <h2 class="text-4xl font-extrabold text-primary-title-color">
+            Our New Products
+          </h2>
+          <p
+            class="w-[60%] mx-auto text-center text-base font-medium leading-6 text-[rgba(19,19,24,0.60)]"
+          >
+          Unleash power on the ice with our cutting-edge gear, designed for peak performance and crafted for hockey enthusiasts.
+          </p>
+        </div>
+        <!-- card container  -->
+        <div
+          class="py-12 grid grid-cols-1 lg:grid-cols-2 gap-6"
+        >
+        <!-- 1st Card  -->
+        <div class="hero border-2 rounded-xl">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="./Images/5.png" class="max-w-sm rounded-xl " />
+            <div class="space-y-3">
+              <div class="flex gap-4"><a href="#"><i class="fa-solid fa-star text-star-color"></i>5.0</a>
+                   <a href="#"><i class="fa-regular fa-eye"></i>20</a>
+                   <a href="#"><i class="fa-regular fa-heart"></i>200</a>
+                  </div>
+              <h1 class="text-xl font-extrabold text-primary-title-color">World Cup Flags Football</h1>
+              <p class="text-base font-medium leading-7 text-[rgba(19,19,24,0.60)]">Showcase global unity with vibrant World Cup Flags Football collection.</p>
+              <div class="flex gap-5">
+                <h6 class="text-lg font-extrabold text-primary-color">Price - $22.00</h6>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-base font-medium text-[rgba(19,19,24,0.50)]">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg> <p class="text-base font-medium text-[rgba(19,19,24,0.50)]">Delivery Fee : Free</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd card  -->
+        <div class="hero border-2 rounded-xl">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="./Images/6.png" class="max-w-sm rounded-xl " />
+            <div class="space-y-3">
+              <div class="flex gap-4"><a href="#"><i class="fa-solid fa-star text-star-color"></i>5.0</a>
+                   <a href="#"><i class="fa-regular fa-eye"></i>20</a>
+                   <a href="#"><i class="fa-regular fa-heart"></i>200</a>
+                  </div>
+              <h1 class="text-xl font-extrabold text-primary-title-color">World Cup Flags Football</h1>
+              <p class="text-base font-medium leading-7 text-[rgba(19,19,24,0.60)]">Showcase global unity with vibrant World Cup Flags Football collection.</p>
+              <div class="flex gap-5">
+                <h6 class="text-lg font-extrabold text-primary-color">Price - $22.00</h6>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-base font-medium text-[rgba(19,19,24,0.50)]">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg> <p class="text-base font-medium text-[rgba(19,19,24,0.50)]">Delivery Fee : Free</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3rd card  -->
+        <div class="hero border-2 rounded-xl">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="./Images/7.png" class="max-w-sm rounded-xl " />
+            <div class="space-y-3">
+              <div class="flex gap-4"><a href="#"><i class="fa-solid fa-star text-star-color"></i>5.0</a>
+                   <a href="#"><i class="fa-regular fa-eye"></i>20</a>
+                   <a href="#"><i class="fa-regular fa-heart"></i>200</a>
+                  </div>
+              <h1 class="text-xl font-extrabold text-primary-title-color">Cap For Hockeys</h1>
+              <p class="text-base font-medium leading-7 text-[rgba(19,19,24,0.60)]">Elevate your style on the ice with premium hockey caps.</p>
+              <div class="flex gap-5">
+                <h6 class="text-lg font-extrabold text-primary-color">Price - $22.00</h6>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-base font-medium text-[rgba(19,19,24,0.50)]">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg> <p class="text-base font-medium text-[rgba(19,19,24,0.50)]">Delivery Fee : Free</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 4th card  -->
+        <div class="hero border-2 rounded-xl">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="./Images/8.png" class="max-w-sm rounded-xl " />
+            <div class="space-y-3">
+              <div class="flex gap-4"><a href="#"><i class="fa-solid fa-star text-star-color"></i>5.0</a>
+                   <a href="#"><i class="fa-regular fa-eye"></i>20</a>
+                   <a href="#"><i class="fa-regular fa-heart"></i>200</a>
+                  </div>
+              <h1 class="text-xl font-extrabold text-primary-title-color">World Cup Flags Football</h1>
+              <p class="text-base font-medium leading-7 text-[rgba(19,19,24,0.60)]">Showcase global unity with vibrant World Cup Flags Football collection.</p>
+              <div class="flex gap-5">
+                <h6 class="text-lg font-extrabold text-primary-color">Price - $22.00</h6>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-base font-medium text-[rgba(19,19,24,0.50)]">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg> <p class="text-base font-medium text-[rgba(19,19,24,0.50)]">Delivery Fee : Free</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 5th card  -->
+        <div class="hero border-2 rounded-xl">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="./Images/9.png" class="max-w-sm rounded-xl " />
+            <div class="space-y-3">
+              <div class="flex gap-4"><a href="#"><i class="fa-solid fa-star text-star-color"></i>5.0</a>
+                   <a href="#"><i class="fa-regular fa-eye"></i>20</a>
+                   <a href="#"><i class="fa-regular fa-heart"></i>200</a>
+                  </div>
+              <h1 class="text-xl font-extrabold text-primary-title-color">World Cup Flags Football</h1>
+              <p class="text-base font-medium leading-7 text-[rgba(19,19,24,0.60)]">Showcase global unity with vibrant World Cup Flags Football collection.</p>
+              <div class="flex gap-5">
+                <h6 class="text-lg font-extrabold text-primary-color">Price - $22.00</h6>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-base font-medium text-[rgba(19,19,24,0.50)]">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg> <p class="text-base font-medium text-[rgba(19,19,24,0.50)]">Delivery Fee : Free</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 6th card  -->
+        <div class="hero border-2 rounded-xl">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="./Images/10.png" class="max-w-sm rounded-xl " />
+            <div class="space-y-3">
+              <div class="flex gap-4"><a href="#"><i class="fa-solid fa-star text-star-color"></i>5.0</a>
+                   <a href="#"><i class="fa-regular fa-eye"></i>20</a>
+                   <a href="#"><i class="fa-regular fa-heart"></i>200</a>
+                  </div>
+              <h1 class="text-xl font-extrabold text-primary-title-color">World Cup Flags Football</h1>
+              <p class="text-base font-medium leading-7 text-[rgba(19,19,24,0.60)]">Showcase global unity with vibrant World Cup Flags Football collection.</p>
+              <div class="flex gap-5">
+                <h6 class="text-lg font-extrabold text-primary-color">Price - $22.00</h6>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-base font-medium text-[rgba(19,19,24,0.50)]">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg> <p class="text-base font-medium text-[rgba(19,19,24,0.50)]">Delivery Fee : Free</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Clients Question Section Start  -->
+
+      <section class="mx-auto container px-2 lg:px-0">
+        <!-- title with description  -->
+        <div>
+          <div
+          class="text-center mx-auto lg:py-8 border-y-2 border-dashed space-y-6"
+        >
+          <h2 class="text-4xl font-extrabold text-primary-title-color">
+            Clients Question
+          </h2>
+          <p
+            class="w-[60%] mx-auto text-center text-base font-medium leading-6 text-[rgba(19,19,24,0.60)]"
+          >
+          Discover what our satisfied clients say about their transformative experiences with our world-class hockey club. Testimonials that inspire success.
+          </p>
+        </div>
+
+        <!-- Question Section  -->
+
+        <div class="hero my-12 border-2 rounded-xl ">
+          <div class="hero-content lg:p-8 flex-col lg:flex-row gap-10">
+            <img  src="./Images/11.png" class="lg:max-w-sm rounded-2xl" />
+            <div>
+              <div class="collapse collapse-plus">
+                <input type="radio" name="my-accordion-3" checked="checked" /> 
+                <div class="collapse-title text-xl font-bold text-primary-title-color">
+                  Our Equipment
+                </div>
+                <div class="collapse-content"> 
+                  <p class="text-base font-normal leading-6 text-[rgba(19,19,24,0.60)]">Equip for triumph with our cutting-edge hockey gear. Precision-engineered sticks, robust protective gear, and performance-enhancing equipment for unmatched on-ice dominance</p>
+                </div>
+              </div>
+              
+              <div class="collapse collapse-plus ">
+                <input type="radio" name="my-accordion-3" /> 
+                <div class="collapse-title text-xl font-bold text-primary-title-color">
+                  Hockey Training
+                </div>
+                <div class="collapse-content"> 
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus ">
+                <input type="radio" name="my-accordion-3" /> 
+                <div class="collapse-title text-xl font-bold text-primary-title-color">
+                  Private Lessons
+                </div>
+                <div class="collapse-content"> 
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus ">
+                <input type="radio" name="my-accordion-3" /> 
+                <div class="collapse-title text-xl font-bold text-primary-title-color">
+                  Ski Touring
+                </div>
+                <div class="collapse-content"> 
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus ">
+                <input type="radio" name="my-accordion-3" /> 
+                <div class="collapse-title text-xl font-bold text-primary-title-color">
+                  Booking
+                </div>
+                <div class="collapse-content"> 
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus ">
+                <input type="radio" name="my-accordion-3" /> 
+                <div class="collapse-title text-xl font-bold text-primary-title-color">
+                  Pricings
+                </div>
+                <div class="collapse-content"> 
+                  <p>hello</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+      <!-- Get In Touch Section Start Here  -->
+
+      <section class="my-24 container px-2 lg:px-0">
+        
+          <div 
+          class="text-center mx-auto py-8 border-y-2 border-dashed space-y-6"
+        >
+          <h2 class="text-4xl font-extrabold text-primary-title-color">
+            Get In Touch
+          </h2>
+          <p
+            class="w-[60%] mx-auto text-center text-base font-medium leading-6 text-[rgba(19,19,24,0.60)]"
+          >
+          Connect with us today. From inquiries to collaborations, our team is eager to assist. Let's create winning moments together
+          </p>
+        </div>
+
+        <div class="hero px-2 lg:px-0 my-24">
+          <div class="hero-content flex-col lg:flex-row items-start  gap-6 ">
+            <div class="flex flex-col gap-6 lg:p-8 border-2 lg:w-[40%] rounded-xl justify-center items-center">
+              <!-- 1st card  -->
+              <div class="card w-full bg-[rgba(188,237,109,0.1)] rounded-2xl">
+                <div class="card-body  pl-8 pt-8 pb-12">
+                  <img class="w-12" src="./Images/Group 1171275317.png" alt="">
+                  <h6 class="card-title text-base font-normal leading-8 text-[rgba(19,19,24,0.40)]">Phone Number :</h6>
+                  <h4 class="text-lg font-bold text-primary-title-color leading-8">(+62) 123-321-543</h4>
+                </div>
+              </div>
+              <!-- 2nd card  -->
+              <div class="card w-full bg-[rgba(253,221,95,0.10)] rounded-2xl">
+                <div class="card-body  pl-8 pt-8 pb-12">
+                  <img class="w-12" src="./Images/Group 1171275318.png" alt="">
+                  <h6 class="card-title text-base font-normal leading-8 text-[rgba(19,19,24,0.40)]">Email :</h6>
+                  <h4 class="text-lg font-bold text-primary-title-color leading-8">hockeys@support.com</h4>
+                </div>
+              </div>
+              <!-- 3rd card  -->
+              <div class="card w-full bg-[rgba(98,156,243,0.10)] rounded-2xl">
+                <div class="card-body  lg:pl-8 lg:py-8">
+                  <img class="w-12" src="./Images/Group 1171275321.png" alt="">
+                  <h6 class="card-title text-base font-normal leading-8 text-[rgba(19,19,24,0.40)]">Location :</h6>
+                  <h4 class="text-lg font-bold text-primary-title-color leading-8">152/1 Mohakhali Wireless Gate</h4>
+                </div>
+              </div>
+            </div>
+            <!-- Contact  form section  -->
+            <div>
+              <div class="flex-1 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div class="space-y-6">
+                    <label class="text-xl font-bold text-primary-title-color"  for="name">Your Name</label>
+                    <input type="text" name="name" placeholder="Enter your full name" class="input input-bordered w-full bg-[rgba(19,19,24,0.03)]" />
+                  </div>
+                  <div class="space-y-6">
+                    <label class="text-xl font-bold text-primary-title-color"  for="email">Your Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" class="input input-bordered w-full bg-[rgba(19,19,24,0.03)]" />
+                  </div>
+                  <div class="space-y-6">
+                    <label class="text-xl font-bold text-primary-title-color"  for="subject">Subject</label>
+                    <input type="text" name="subject" placeholder="Enter your subject" class="input input-bordered w-full bg-[rgba(19,19,24,0.03)]" />
+                  </div>
+                  <div class="space-y-6">
+                    <label class="text-xl font-bold text-primary-title-color"  for="number">Phone Number</label>
+                    <input type="number" name="number" placeholder="Enter your phone number" class="input input-bordered w-full bg-[rgba(19,19,24,0.03)]" />
+                  </div>
+                  <div class="space-y-6 lg:col-span-2 lg:row-span-12">
+                    <label class="text-xl font-bold text-primary-title-color" for="message">Message</label>
+                    <textarea class="bg-[rgba(19,19,24,0.03)] h-[330px] p-5  w-full rounded-xl" name="message" id="message" placeholder="Write your message"></textarea>
+                  </div>
+                  
+                  <div class="lg:col-span-2">
+                    <button class="px-6 py-4 bg-primary-color text-base lg:text-xl w-full font-bold text-white rounded-2xl">Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- social media part -->
+
+        <div class="bg-[#13131808] p-9 rounded-xl mt-10 lg:mt-12 space-y-6 w-full mx-auto">
+          <h3 class="text-2xl text-primary-title-color font-extrabold text-center">Social Media</h3>
+          <div class="flex justify-center items-center gap-8">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+          </div>
+      </div>
+  
+
+      </section>
+
+      
+
+    </main>
+
+
+    <!-- footer section start here  -->
+
+    <footer class="footer mx-auto p-10 lg:py-24  lg:px-36  gap-40 justify-between text-center bg-primary-title-color">
+      <aside class=" text-center lg:text-start">
+        <h3 class="mx-auto lg:mx-0 text-3xl font-extrabold text-white">Get In Touch</h3>
+        <p class="text-center lg:text-start w-[90%] lg:w-[90%] mx-auto lg:mx-0 text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Have questions or ready to join the hockey excitement? Reach out to our friendly team for inquiries, partnerships, or any assistance. We're here to make your hockey experience exceptional.</p>
+        <div class="flex gap-3 mx-auto lg:mx-0">
+          <span class="relative top-3"><i class="fa-regular fa-envelope text-primary-color"></i></span>
+          <p class="text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">hockeys@support.com</p>
+        </div>
+        <div class="flex gap-3 mx-auto lg:mx-0">
+          <span class="relative top-3"><i class="fa-solid fa-phone text-primary-color"></i></span>
+          <p class="text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">(+62) 123-321-543</p>
+        </div>
+      </aside> 
+      <div class="flex gap-10 lg:gap-40 justify-between items-start mx-auto">
+
+
+        <nav class="text-center lg:text-start">
+          <header class="footer-title text-lg font-bold text-white">Company</header> 
+          <a class="link link-hover  text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">About us</a><br>
+          <a class="link link-hover  text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Leadership</a><br>
+          <a class="link link-hover  text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Careers</a><br>
+          <a class="link link-hover  text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">News & Article</a><br>
+          <a class="link link-hover  text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Legal Notice</a>
+        </nav> 
+        <nav class="text-center lg:text-start">
+          <header class="footer-title text-lg font-bold text-white">Support</header> 
+          <a class="link link-hover text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Help center</a><br>
+          <a class="link link-hover text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">FAQ</a><br>
+          <a class="link link-hover text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Ticket Support</a><br>
+          <a class="link link-hover text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Contact Us</a>
+        </nav> 
+
+
+      </div>
+      <nav class="text-center mx-auto lg:text-start">
+        <header class="footer-title mx-auto lg:mx-0 text-lg font-bold text-white">Services</header> 
+        <a class="link link-hover mx-auto lg:mx-0 text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Academy</a>
+        <a class="link link-hover mx-auto lg:mx-0 text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Group Lesson</a>
+        <a class="link link-hover mx-auto lg:mx-0 text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Hockeys for kids</a>
+        <a class="link link-hover mx-auto lg:mx-0 text-base font-medium text-[rgba(255,255,255,0.60)] leading-10">Hockeys for Adult</a>
+      </nav>
+    </footer>
+  </body>
 </html>
